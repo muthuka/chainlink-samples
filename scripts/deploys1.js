@@ -3,7 +3,7 @@ require('dotenv').config();
 
 async function main() {
   // We get the contract to deploy
-  const s1 = await hre.ethers.getContractFactory("Sample1");
+  const s1 = await hre.ethers.getContractFactory("Sample2");
   const s1deployed = await s1.deploy()
   console.log("Sample1 deployed to:", s1deployed.address);
 

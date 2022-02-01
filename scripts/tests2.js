@@ -10,12 +10,12 @@ const web3 = createAlchemyWeb3(API_URL);
 console.log("Connected with", API_URL);
 
 // Let's see the contract ABI json
-const contract = require("../artifacts/contracts/Sample1.sol/Sample1.json")
-const contractAddress = "0xCD70782c7e20661ae04cf88C12571347c0C3C8F0";
+const contract = require("../artifacts/contracts/Sample2.sol/Sample2.json")
+const contractAddress = "0xD2210487610C5EF355c2454c833946eCD03365D1";
 const s1contract = new web3.eth.Contract(contract.abi, contractAddress);
 
-const getLatest = async () => {
-    const callresult = await s1contract.methods.getLatestPrice().call()
+const getLatest = async (token) => {
+    const callresult = await s1contract.methods.getLatestPrice(token).call()
     .catch((err) => {
         console.log("Failed:", err);
     });
@@ -23,4 +23,4 @@ const getLatest = async () => {
 }
 
 // Let's do it
-getLatest();
+getLatest("ETH");
