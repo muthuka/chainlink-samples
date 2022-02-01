@@ -11,4 +11,4 @@ node scripts/tests2.js // Send parameter BTC or ETH or UNI
 ```
 # Sample output
 
-<img src="https://github.com/muthuka/chainlink-samples/blob/main/assets/shot1.png" align="left" height="320"/>
+<img src="https://github.com/muthuka/chainlink-samples/blob/main/shot1.png" align="left" height="320"/>
